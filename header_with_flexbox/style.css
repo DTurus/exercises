@@ -1,26 +1,30 @@
+body {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
 header {
     background-color: white;
-    width: 1280px;
+    max-width: 1280px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .container {
-    width: 1024px;
+    max-width: 1024px;
+    width: 100%;
     padding: 20px 24px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
     border-bottom: 2px solid #bebebe;
 }
 
 img {
-    display: flex;
     width: 112px;
     height: 32px;
+    /* object-fit solo perché é fatto male l'svg */
     object-fit: cover;
 }
 
@@ -28,29 +32,25 @@ nav {
     display: flex;
 }
 
-a {
+nav a {
     text-transform: uppercase;
-    background-color: transparent;
     color: #bebebe;
-    size: 16px;
-    letter-spacing: 0%;
-    vertical-align: middle;
     font-weight: 500;
-    line-height: 100%;
     text-decoration: none;
     margin-left: 12px;
     margin-right: 12px;
 }
 
-.first-link {
-    margin-left: 0px;
+nav a:first-of-type {
+    margin-left: 0;
 }
 
-.last-link {
-    margin-right: 0px;
+nav a:last-of-type {
+    margin-right: 0;
 }
 
-.m-plus-rounded-1c-regular {
+/* Non servono perché ho messo il font nel body */
+/* .m-plus-rounded-1c-regular {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -60,5 +60,5 @@ a {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 500;
   font-style: normal;
-}
+} */
 
