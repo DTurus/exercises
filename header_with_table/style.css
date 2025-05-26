@@ -1,0 +1,52 @@
+body {
+    font-family: "M PLUS Rounded 1c";
+}
+
+.wrapper {
+    background-color: white;
+    max-width: 1280px;
+    width: 100%;
+    margin: auto;
+}
+
+.header {
+    max-width: 1024px;
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+    border-bottom: 2px solid #bebebe;
+}
+
+tr td {
+    padding: 20px 24px;
+    vertical-align: middle;
+}
+
+img {
+    display: block;
+    width: 112px;
+    height: 32px;
+    /* object-fit solo perché é fatto male l'svg */
+    object-fit: cover;
+}
+
+.nav {
+    text-align: right;
+}
+
+.nav a {
+    text-transform: uppercase;
+    color: #bebebe;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.nav a:first-of-type {
+    margin-left: 0;
+}
+
+.nav a:last-of-type {
+    margin-right: 0;
+}
