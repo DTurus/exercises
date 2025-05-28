@@ -39,21 +39,29 @@ nav a {
     color: #bebebe;
     font-weight: 500;
     text-decoration: none;
-    margin-left: 12px;
-    margin-right: 12px;
+    /* margin-left: 12px;
+    margin-right: 12px; */
     height: 100%;
     display: flex;
     align-items: center;
     border-bottom: 4px solid transparent;
     transition: border-bottom 0.3s ease;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
-nav a:first-of-type {
-    margin-left: 0;
+/* nav a:first-of-type {
+    padding-left: 0;;
 }
 
 nav a:last-of-type {
-    margin-right: 0;
+    padding-right: 0;;
+} */
+
+/* Su MDN é scritto che :active va messo dopo :hover ma cosí facendo non viene preso */
+nav a:active {
+    background-color: #00b2c2;
+    color: white;
 }
 
 nav a:hover {
