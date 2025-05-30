@@ -61,14 +61,20 @@ nav a:last-of-type {
 } */
 
 /* Su MDN é scritto che :active va messo dopo :hover ma cosí facendo non viene preso */
-nav a:active {
+/* Sul portatile funziona, qui no */
+/* nav a:active {
     background-color: #00b2c2;
     color: white;
-}
+} */
 
 nav a:hover {
     border-bottom: 4px solid #00b2c2;
 };
+
+nav a:active {
+    background-color: #00b2c2;
+    color: white;
+}
 
 
 
