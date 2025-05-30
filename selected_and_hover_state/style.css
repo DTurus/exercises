@@ -44,10 +44,12 @@ nav a {
     height: 100%;
     display: flex;
     align-items: center;
+    border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
     transition: border-bottom 0.3s ease;
     padding-left: 12px;
     padding-right: 12px;
+    box-sizing: border-box;
 }
 
 /* nav a:first-of-type {
