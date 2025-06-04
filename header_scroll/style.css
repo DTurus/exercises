@@ -1,0 +1,102 @@
+body {
+    font-family: "M PLUS Rounded 1c";
+}
+
+header {
+    background-color: white;
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #bebebe;
+}
+
+img {
+    width: 112px;
+    height: 32px;
+    /* object-fit solo perché é fatto male l'svg */
+    object-fit: cover;
+    padding: 20px 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+    color: #bebebe;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    /* box-sizing: border-box; */
+    overflow: hidden;
+}
+
+nav ul li:first-of-type {
+    padding-left: 0;
+}
+
+nav ul li:last-of-type {
+    padding-right: 0;
+}
+
+nav ul li a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    content: "";
+    height: 4px;
+
+    /* transizione con comparsa laterale della barra di sottolineatura */
+    /* background-color: #00b2c2;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease; */
+
+    /* transizione con comparsa centrale della barra di sottolineatura */
+    /* background-color: #00b2c2;
+    transform: scaleX(0);
+    transition: transform 0.3s ease; */
+
+    /* transizione con comparsa tramite colore della barra di sottolineatura */
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    /* transizione con comparsa laterale della barra di sottolineatura */
+    /* transform: translateX(0); */
+
+    /* transizione con comparsa centrale della barra di sottolineatura */
+    /* transform: scaleX(1); */
+
+    /* transizione con comparsa tramite colore della barra di sottolineatura */
+    background-color: #00b2c2;
+}
+
+
+nav ul li a:active {
+    background-color: #00b2c2;
+    color: white;
+}
