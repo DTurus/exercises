@@ -4,6 +4,19 @@ body {
     width: 100%; */
 }
 
+/* header {
+  background-color: white;
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  position: sticky;
+  top: 0;
+
+  transition: 0.4s;
+} */
+
 header {
   background-color: white;
   /* max-width: 1280px; */
@@ -15,8 +28,14 @@ header {
   position: sticky;
   top: 0;
 
-  transition: 0.4s;
+  transition: transform 0.3s ease-in-out;
 }
+
+.hide {
+  transform: translateY(-100%);
+}
+
+
 
 .container {
   max-width: 1024px;

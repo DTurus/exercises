@@ -20,12 +20,15 @@ function scrollFunction() {
     actualScrollPosition > headerHeight &&
     actualScrollPosition >= lastScrollPosition
   ) {
-    document.getElementById("header").style.position = "relative";
+    // document.getElementById("header").style.position = "relative";
+    document.getElementById("header").classList.add("hide");
   }
 
   if (actualScrollPosition < lastScrollPosition) {
-    document.getElementById("header").style.position = "sticky";
-    document.getElementById("header").style.top = "0";
+    // document.getElementById("header").style.position = "sticky";
+    // document.getElementById("header").style.top = "0";
+
+    document.getElementById("header").classList.remove("hide");
   }
 
   lastScrollPosition = actualScrollPosition;
