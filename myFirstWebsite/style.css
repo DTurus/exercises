@@ -127,6 +127,7 @@ main {
 
 video {
   width: 100%;
+  display: block;
 }
 
 .hero-video::after {
@@ -177,6 +178,10 @@ video {
   /* video-text */
   font-size: 24px;
   margin: 24px 0 0 0;
+}
+
+section img {
+  display: block;
 }
 
 .rect-hero {
