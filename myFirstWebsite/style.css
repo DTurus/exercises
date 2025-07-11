@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "M PLUS Rounded 1c";
+  font-family: "M PLUS Rounded 1c", "Titillium Web", sans-serif;
 }
 
 header {
@@ -15,6 +15,7 @@ header {
 
   position: sticky;
   top: 0;
+  z-index: 100;
 
   transition: transform 0.3s ease-in-out;
 }
@@ -22,8 +23,6 @@ header {
 .hide {
   transform: translateY(-100%);
 }
-
-
 
 .container {
   max-width: 1024px;
@@ -33,7 +32,8 @@ header {
   border-bottom: 2px solid #bebebe;
 }
 
-img {
+.container img {
+  box-sizing: content-box;
   width: 112px;
   height: 32px;
   /* object-fit solo perché é fatto male l'svg */
@@ -116,6 +116,11 @@ nav ul li a:active {
   color: white;
 }
 
+main {
+  max-width: 1280px;
+  width: 100%;
+}
+
 .hero {
   position: relative;
 }
@@ -124,8 +129,8 @@ video {
   width: 100%;
 }
 
-.hero::after {
-  background-color: #2EB8E266;
+.hero-video::after {
+  background-color: #2eb8e266;
   content: "";
   position: absolute;
   top: 0;
@@ -134,7 +139,7 @@ video {
   left: 0;
 }
 
-.hero-container {
+.hero-video-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -145,6 +150,7 @@ video {
   max-width: 800px;
   width: 100%;
   padding: 0 16px;
+  font-family: "Titillium Web";
 }
 
 /* .video-overlay {
@@ -160,15 +166,108 @@ video {
   flex-direction: column;
 } */
 
-.hero-title {
+.hero-video-container .hero-title {
   /* video-title */
   font-size: 64px;
   margin: 0;
-  padding: 0 84px
+  padding: 0 84px;
 }
 
-.hero-text {
+.hero-video-container .hero-text {
   /* video-text */
   font-size: 24px;
   margin: 24px 0 0 0;
 }
+
+.rect-hero {
+  background-color: #c1c4fa;
+  padding: 50px;
+}
+
+.rect-hero img {
+  max-width: 988px;
+  width: 100%;
+}
+
+.hero-image-container {
+  font-family: "Titillium Web";
+  background-color: white;
+  max-width: 400px;
+  width: 100%;
+  padding: 40px;
+}
+
+.rect-hero .hero-image-container {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+}
+
+.hero-image-container .hero-title {
+  /* image-title */
+  font-size: 32px;
+  line-height: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-image-container .hero-text {
+  /* image-text */
+  font-size: 16px;
+  margin: 24px 0 0 0;
+}
+
+.circle-hero {
+  background-color: #f6a7a7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-hero img {
+  max-width: 659px;
+  border-radius: 50%;
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin: 50px 0;
+}
+
+.circle-hero .hero-image-container {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.transformed-hero {
+  background-color: #ddf8ad;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 145px 50px;
+}
+
+.transformed-hero img {
+  max-width: 880px;
+  width: 80%;
+  transform: skewX(25deg);
+}
+
+.transformed-hero .hero-image-container {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%) skewX(25deg) translateX(-50px);
+}
+
+/* .skewed {
+  margin: 145px 50px;
+  position: relative;
+} */
+
+/* .skewed {
+  margin: 145px 50px;
+  overflow: hidden;
+  transform: skewX(25deg);
+} */
