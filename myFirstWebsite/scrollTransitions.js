@@ -18,7 +18,7 @@ function scrollFunction() {
 
   if (
     actualScrollPosition > headerHeight &&
-    actualScrollPosition >= lastScrollPosition
+    actualScrollPosition > lastScrollPosition
   ) {
     // document.getElementById("header").style.position = "relative";
     document.getElementById("header").classList.add("hide");
