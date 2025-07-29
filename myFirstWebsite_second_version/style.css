@@ -1,0 +1,211 @@
+:root {
+  --section-height: 768px;
+  --section-width: 1280px;
+
+  --card-height: 260px;
+  --card-width: 400px;
+
+  --rect-padding-right: calc(var(--section-width) * 0.18);
+  --rect-padding-left: calc(var(--section-width) * 0.04);
+
+  --circle-padding-horizontal: calc(var(--section-width) * 0.24);
+
+  --transformed-padding-horizontal: calc(var(--section-width) * 0.11);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 16px;
+  margin: 24px 0 0 0;
+}
+
+/* Fonts */
+.m-plus-rounded-1c-regular {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.m-plus-rounded-1c-medium {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.m-plus-rounded-1c-bold {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.titillium-web-regular {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.titillium-web-bold {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Main */
+main {
+  max-width: var(--section-width);
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+}
+
+/* Video */
+video {
+  display: block;
+  width: 100%;
+  max-width: var(--section-width);
+  max-height: var(--section-height);
+  height: 100%;
+}
+
+.hero-video::after {
+  background-color: #2eb8e266;
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+
+.hero-video-text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* to set the center in the middle of the box */
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  max-width: calc(var(--section-width) * 0.6);
+  width: 100%;
+  padding: 0 16px;
+}
+
+.hero-video-text-overlay h1 {
+  font-size: 64px;
+  margin: 0;
+  padding: 0 84px;
+  line-height: 1;
+}
+
+.hero-video-text-overlay p {
+  /* video-text */
+  font-size: 24px;
+  margin: 24px 0 0 0;
+}
+
+section {
+  max-width: var(--section-width);
+  width: 100%;
+  max-height: var(--section-height);
+  height: 100%;
+}
+
+section img {
+  display: block;
+}
+
+.rect-hero {
+  background-color: #c1c4fa;
+  height: var(--section-height);
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: var(--rect-padding-left);
+  padding-right: var(--rect-padding-right);
+}
+
+.rect-hero img {
+  max-height: calc(var(--section-height) * 0.85);
+  width: 100%;
+}
+
+.card {
+  display: block;
+  background-color: white;
+  height: var(--card-height);
+  width: var(--card-width);
+  padding: 40px;
+}
+
+.rect-hero .card {
+  position: absolute;
+  top: 50%;
+  right: var(--rect-padding-right);
+  transform: translate(50%, -50%);
+}
+
+.circle-hero {
+  background-color: #f6a7a7;
+  height: var(--section-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 var(--circle-padding-horizontal);
+}
+
+.circle-hero img {
+  width: 100%;
+  max-width: calc(var(--section-height) * 0.85);
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.circle-hero .card {
+  position: absolute;
+  top: 50%;
+  right: calc(100% - var(--circle-padding-horizontal));
+  transform: translate(50%, -50%);
+}
+
+.transformed-hero {
+  background-color: #ddf8ad;
+  height: var(--section-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 var(--transformed-padding-horizontal);
+  overflow: hidden;
+}
+
+.transformed-hero img {
+  width: 100%;
+  max-width: calc(var(--section-width) * 0.69);
+  transform: skewX(25deg);
+}
+
+.transformed-hero .card {
+  position: absolute;
+  top: 50%;
+  right: var(--transformed-padding-horizontal);
+  transform: translate(0, -50%) skewX(25deg);
+}
