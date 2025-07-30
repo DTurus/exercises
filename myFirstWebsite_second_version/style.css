@@ -11,6 +11,23 @@
   --circle-padding-horizontal: calc(var(--section-width) * 0.24);
 
   --transformed-padding-horizontal: calc(var(--section-width) * 0.11);
+
+  --video-height-mobile: 480px;
+  --video-aspect-ratio-mobile: 2/3;
+
+  --video-card-height-mobile: 148px;
+  --video-card-width-mobile: 320px;
+
+  --image-height-mobile: 210px;
+  --image-width-mobile: 320px;
+
+  --card-height-mobile: 136px;
+  --card-width-mobile: 320px;
+
+  --section-width-mobile: 320px;
+  --section-height-mobile: calc(
+    var(--image-height-mobile) + var(--card-height-mobile)
+  );
 }
 
 * {
@@ -208,4 +225,155 @@ section img {
   top: 50%;
   right: var(--transformed-padding-horizontal);
   transform: translate(0, -50%) skewX(25deg);
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+    line-height: 27px;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    font-size: 14px;
+    margin: 8px 0 0 0;
+  }
+
+  main {
+    max-width: var(--section-width-mobile);
+    width: 100%;
+  }
+
+  /* Video */
+  video {
+    display: block;
+    width: 100%;
+    max-width: var(--section-width-mobile);
+    max-height: var(--video-height-mobile);
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    aspect-ratio: var(--video-aspect-ratio-mobile);
+  }
+
+  .hero-video::after {
+    background-color: #2eb8e266;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
+
+  .hero-video-text-overlay {
+    position: absolute;
+    top: unset;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+    /* to set the center in the middle of the box */
+    transform: translate(0, 0);
+    color: white;
+    width: 100%;
+    padding: 0 24px;
+    text-align: start;
+    height: var(--video-card-height-mobile);
+    z-index: 100;
+  }
+
+  .hero-video-text-overlay h1 {
+    font-size: 32px;
+    margin: 0;
+    line-height: 1;
+    padding: 0;
+  }
+
+  .hero-video-text-overlay p {
+    font-size: 16px;
+    margin: 12px 0 0 0;
+  }
+
+  section {
+    max-width: var(--section-width-mobile);
+    width: 100%;
+    max-height: var(--section-height-mobile);
+    height: 100%;
+  }
+
+  .rect-hero {
+    background-color: #c1c4fa;
+    height: var(--section-height-mobile);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .rect-hero img {
+    max-height: var(--image-height-mobile);
+    width: 100%;
+  }
+
+  .card {
+    display: block;
+    background-color: transparent;
+    height: var(--card-height-mobile);
+    width: var(--card-width-mobile);
+    padding: 16px 24px;
+  }
+
+  .rect-hero .card {
+    position: relative;
+    top: unset;
+    right: unset;
+    transform: unset;
+  }
+
+  .circle-hero {
+    background-color: #f6a7a7;
+    height: var(--section-height-mobile);
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .circle-hero img {
+    border-radius: unset;
+    max-height: var(--image-height-mobile);
+    width: 100%;
+  }
+
+  .circle-hero .card {
+    position: relative;
+    top: unset;
+    right: unset;
+    transform: unset;
+    color: white;
+  }
+
+  .transformed-hero {
+    background-color: #ddf8ad;
+    height: var(--section-height-mobile);
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .transformed-hero img {
+    width: 100%;
+    max-width: var(--image-width-mobile);
+    max-height: var(--image-height-mobile);
+    height: 100%;
+    transform: unset;
+  }
+
+  .transformed-hero .card {
+    position: relative;
+    top: unset;
+    right: unset;
+    transform: unset;
+  }
 }
